@@ -1,0 +1,136 @@
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --primary-color: #007BFF;
+  --primary-color-hover: #0056b3;
+  --border-color: #cccccc;
+  --btn-bg-color: var(--primary-color);
+  --btn-text-color: #ffffff;
+  --input-bg-color: #f9f9f9;
+  --input-text-color: #222222;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #28a745;
+  --primary-color-hover: #1e7e34;
+  --border-color: #333333;
+  --btn-bg-color: var(--primary-color);
+  --btn-text-color: #ffffff;
+  --input-bg-color: #1e1e1e;
+  --input-text-color: #e0e0e0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h2, h3 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 12px 15px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: var(--btn-text-color);
+  user-select: none;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+tr:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+form {
+  margin-top: 25px;
+  max-width: 600px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+button, .btn {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--primary-color-hover);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  table, form {
+    font-size: 0.9rem;
+  }
+  input, select, button {
+    font-size: 0.9rem;
+  }
+}
